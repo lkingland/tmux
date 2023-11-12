@@ -36,7 +36,7 @@ main()
   # Dracula Color Pallette
   white='#f8f8f2'
   gray='#44475a'
-  dark_gray='#282a36'
+  dark_gray='#000000'
   light_purple='#bd93f9'
   dark_purple='#6272a4'
   cyan='#8be9fd'
@@ -148,7 +148,7 @@ main()
       IFS=' ' read -r -a colors  <<< $(get_tmux_option "@dracula-cwd-colors" "dark_gray white")
       tmux set-option -g status-right-length 250
       script="#($current_dir/cwd.sh)"
-    
+
     elif [ $plugin = "fossil" ]; then
       IFS=' ' read -r -a colors  <<< $(get_tmux_option "@dracula-fossil-colors" "green dark_gray")
       tmux set-option -g status-right-length 250
